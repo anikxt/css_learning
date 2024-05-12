@@ -1,0 +1,15 @@
+/* style attribute, ids, classes, elements */
+/* 0 1 0 0 */
+#title {
+  color: purple;
+}
+
+/* 0 0 1 0 */
+.title {
+  color: red;
+}
+
+/* 0 0 0 1 */
+h1 {
+  color: green !important;
+}
