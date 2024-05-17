@@ -44,9 +44,32 @@
 - Decorate text using 'text-decoration-\*' property
   - 'text-decoration-line' has 'underline', 'overline', 'line-through' values.
   - 'text-decoration-color'
-  - 'text-decoration-style' has 'solid'(default),'double','wavy','dotted','dashed' values.
+  - 'text-decoration-style' has 'solid'(default), 'double', 'wavy', 'dotted', 'dashed' values.
   - 'text-decoration-thickness'
-  - 'text-decoration' shorthand property takes 4 values namely 'line','color','style','thickness'
+  - 'text-decoration' shorthand property takes 4 values namely 'line', 'color', 'style', 'thickness'
 - Using 'text-align' property to align the text in different ways horizantally.
   - It has 6 possible values namely 'center', 'start', 'end', 'right', 'left', 'justify'
 - Character (ch) Unit for typography to be put on 'max-width' property when you want a fix a certain number of characters on one line.
+
+### The Box Model
+
+- Margin is use to push the other elements away, from the element on which it is applied, by creating space that other elements can't occupy.
+  - 'margin-\*' has 4 properties namely 'margin-top', 'margin-bottom', 'margin-left', 'margin-right'
+  - 'margin' shorthand property takes 2 values namely 'top-bottom', 'left-right'
+  - 'margin' shorthand property takes 3 values namely 'top', 'left-right', 'bottom'
+  - 'margin' shorthand property takes 4 values namely 'top', 'right', 'bottom', 'left'
+- Padding adds space inside the element.
+  - 'padding-\*' has 4 properties namely 'padding-top', 'padding-bottom', 'padding-left', 'padding-right'
+  - 'padding' shorthand property takes 2 values namely 'top-bottom', 'left-right'
+  - 'padding' shorthand property takes 3 values namely 'top', 'left-right', 'bottom'
+  - 'padding' shorthand property takes 4 values namely 'top', 'right', 'bottom', 'left'
+- 'border' property sets an element's border.
+  - 'border' shorthand property takes 3 values namely 'size', 'style', 'color'
+  - 'border-style' has 'none', 'hidden', 'dotted', 'dashed', 'solid'(popular), 'double', 'groove', 'ridge', 'inset', 'offset' values.
+- 'height' and 'width' property is applied to the content area (or box) of the element.
+- Box Model is just a name that encapulates the content, the padding, the border and, the margin.
+  - 'box-sizing' property has 'content-box'(default), 'border-box' values.
+  - 'border-box' value ensures consistency in all elements.
+  - The proper way of giving all of the elements
+    the box sizing of border box:
+    - \*, \*::before, \*::after { box-sizing: border-box; }

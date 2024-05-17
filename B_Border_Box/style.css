@@ -1,0 +1,8 @@
+/* This is the proper way of giving all of the elements 
+the box sizing of border box. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
