@@ -74,3 +74,17 @@
     the box sizing of border box:
     - \*, \*::before, \*::after { box-sizing: border-box; }
 - If you want to centre an element using the margin property of 'auto', your element first needs to be a block level element and, secondly your element needs to have a width property. If your element meets both these criterias, then you can centre it using a margin of 'auto' on the left and right sides.
+
+### CSS Units
+
+- There's two categories of units:
+  - Absolute Units (px)
+  - Relative Units (em, rem, vh, vw, dvh, dvw, ch)
+  - Percentages (%) don't belong to either of the two.
+- The problem with pixel unit is that it doesn't scale because it is an absolute unit and, absolute units cannot be scaled up or down when changing the default font-size of the browser.
+- 1 rem equals 16px (default font size of the browser)
+- Most of the times, the best practice is just to use the 'rem' unit, however 'em' unit can be useful when you know what you're doing.
+- Its a bad practice to use 'vw' (viewport width) unit because it just adds horizontal scroll bar.
+- You can use 'dvh' (device viewport height) unit instead of 'vh' (viewport height) unit to make it work on mobile devices. 'dvh' is same as 'vh'.
+- Percentages (%) are relative to their direct parent.
+- Character (ch) Unit for typography to be put on 'max-width' property when you want a fix a certain number of characters on one line.
