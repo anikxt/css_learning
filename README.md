@@ -73,3 +73,4 @@
   - The proper way of giving all of the elements
     the box sizing of border box:
     - \*, \*::before, \*::after { box-sizing: border-box; }
+- If you want to centre an element using the margin property of 'auto', your element first needs to be a block level element and, secondly your element needs to have a width property. If your element meets both these criterias, then you can centre it using a margin of 'auto' on the left and right sides.
