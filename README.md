@@ -88,3 +88,39 @@
 - You can use 'dvh' (device viewport height) unit instead of 'vh' (viewport height) unit to make it work on mobile devices. 'dvh' is same as 'vh'.
 - Percentages (%) are relative to their direct parent.
 - Character (ch) Unit for typography to be put on 'max-width' property when you want a fix a certain number of characters on one line.
+
+### Flexbox
+
+- 'display' property has 'block', 'inline', 'inline-block', 'flex', 'grid' values.
+  - 'block' level elements are elements that start on their own line and covers the entire viewport width so that other elements appear under them.
+  - 'inline' and 'inline-block' elements are elements that do not start on their own line and the difference between 'inline' and 'inline-block' is 'inline-block' elements has access to all of the box model properties such as 'height', 'width', 'padding', 'border' and 'margin' while 'inline' elements do not have access to all of the box model properties.
+  - 'h', 'p' tags are 'block' level element.
+  - 'strong' tag is 'inline element'.
+  - 'button' is an 'inline-block' element.
+- To use a flexbox we need to add a 'display : flex' on the parent element.
+- Defining a 'display : flex' creates two invisible axis, a main axis and a cross axis.
+  - By default the main axis is horizontal which is why our items are currently laid out horizontally. however we can use the flex direction property to invert the axes.
+- 'flex-direction' property has 'row'(default), 'column' values.
+- 'justify-content' property aligns items along the main axis.
+  - 'justify-content' property has 'flex-start'(default), 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly' values.
+- To align items along the cross axis, we can use the 'align-items' property.
+  - 'align-items' property has 'stretch'(default), 'flex-start', 'flex-end', 'center', 'baseline' values.
+- 'flex-wrap' property has 'wrap', 'nowrap'(default) values.
+- 'align-content' property only works when we have 'flex-wrap' property set to 'wrap' and have items wrapping.
+  - 'align-content' property has 'flex-start'(default), 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly' values.
+- Use 'gap' property to add gaps between each item.
+  - 'gap' property takes a unit value namely 'rows-column'
+  - 'gap' property takes 2 values namely 'rows', 'column'
+- 'flex-grow' is a property that belongs inside an individual flex item rather than belonging on a container element.
+  - 'flex-grow' takes in a unitless value that serves as a proportion and what it does is allows the item to grow if there is enough space for it to do so.
+- 'flex-shrink' also takes in a unitless value. However, the flex-shrink property defines how fast one item shrinks in comparison to the others.
+  - the higher the value, the faster it shrinks in comparison to others.
+- The way 'flex-basis' work is it defines a size of our item based on the direction of the main axis.
+- 'flex' shorthand property takes 3 values namely 'flex-grow', 'flex-shrink', 'flex-basis'
+- 'flex' shorthand property takes 2 values namely 'flex-grow', 'flex-shrink'(unitless)/'flex-basis'(unit)
+- 'flex' shorthand property takes 1 value namely 'flex-grow' (1 1 0)
+- 'align-self' property only aligns individual items and is a property given to an individual element inside a flex container.
+  - 'align-self' property has 'flex-start'(default), 'flex-end', 'baseline', 'center', 'stretch' values.
+- 'order' property is use to change the order of the elements.
+  - the higher the order the later the element will be placed.
+  - CAUTION: the order property messes with semantics and the accessibility of your components, so avoid it as much as you can.
