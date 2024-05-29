@@ -21,6 +21,7 @@ button {
   font-family: inherit;
 }
 
+/* header */
 .header {
   width: 90%;
   margin-inline: auto;
@@ -31,31 +32,32 @@ button {
   padding: 1rem 0;
 }
 
-.title {
+.header__title {
   font-size: 1.5rem;
   text-transform: uppercase;
   flex: 1;
 }
 
-.menu {
+.header__menu {
   display: flex;
   gap: 1rem;
   flex: 1;
   justify-content: center;
 }
 
-.link {
+.header__link {
   text-decoration: none;
   color: #000;
 }
 
-.btn-container {
+.header__btn-container {
   display: flex;
   gap: 1rem;
   flex: 1;
   justify-content: flex-end;
 }
 
+/* utility class */
 .btn {
   background: #000;
   color: #fff;

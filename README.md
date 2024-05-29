@@ -124,3 +124,7 @@
 - 'order' property is use to change the order of the elements.
   - the higher the order the later the element will be placed.
   - CAUTION: the order property messes with semantics and the accessibility of your components, so avoid it as much as you can.
+
+### BEM
+
+- BEM is shorthand for Blocks, Elements and Modifiers.
