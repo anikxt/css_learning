@@ -95,11 +95,11 @@
   - 'block' level elements are elements that start on their own line and covers the entire viewport width so that other elements appear under them.
   - 'inline' and 'inline-block' elements are elements that do not start on their own line and the difference between 'inline' and 'inline-block' is 'inline-block' elements has access to all of the box model properties such as 'height', 'width', 'padding', 'border' and 'margin' while 'inline' elements do not have access to all of the box model properties.
   - 'h', 'p' tags are 'block' level element.
-  - 'strong' tag is 'inline element'.
+  - 'strong', 'a' tag is 'inline element'.
   - 'button' is an 'inline-block' element.
 - To use a flexbox we need to add a 'display : flex' on the parent element.
 - Defining a 'display : flex' creates two invisible axis, a main axis and a cross axis.
-  - By default the main axis is horizontal which is why our items are currently laid out horizontally. however we can use the flex direction property to invert the axes.
+  - By default the main axis is horizontal which is why the items are currently laid out horizontally. however we can use the flex direction property to invert the axes.
 - 'flex-direction' property has 'row'(default), 'column' values.
 - 'justify-content' property aligns items along the main axis.
   - 'justify-content' property has 'flex-start'(default), 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly' values.
