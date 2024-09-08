@@ -19,7 +19,7 @@
 - CSS stands for 'Cascading Style Sheet'
 - Cascade is the algrithm that determines which conflicting CSS rule is to be applied on an HTML element. In other words, the Cascade is the process taken by the CSS to resolve the conflicts.
   - This process is divided into 3 factors -> order of appearance, specificity, importance
-  - Bracket ony comepete with bracket which means any attribute only compete with its own kind.
+  - Bracket only compete with bracket which means any attribute only compete with its own kind.
 - Best Practices -> Anything you want to style give it a 'class attribute'
 - Inheritance -> a property where the child elements inherits from its parent elements.
 - 'color' property only applies to text.
