@@ -73,7 +73,9 @@
   - The proper way of giving all of the elements
     the box sizing of border box:
     - \*, \*::before, \*::after { box-sizing: border-box; }
+- Best Practies -> \* { margin: 0; padding: 0; line-height: 1.5; }
 - If you want to centre an element using the margin property of 'auto', your element first needs to be a block level element and, secondly your element needs to have a width property. If your element meets both these criterias, then you can centre it using a margin of 'auto' on the left and right sides.
+- 'margin-inline' is useful if you really don't want to have zero margins on the top and bottom.
 
 ### CSS Units
 
@@ -83,6 +85,7 @@
   - Percentages (%) don't belong to either of the two.
 - The problem with pixel unit is that it doesn't scale because it is an absolute unit and, absolute units cannot be scaled up or down when changing the default font-size of the browser.
 - 1 rem equals 16px (default font size of the browser)
+- Instead of being relative to the font size of the HTML element, like the rem unit, the relative of em unit is dependent on a few conditions, when the em unit is defined on any other property than the font size property, the em unit becomes relative to the font size of its own element. if the font size of the own element is not present then it will start looking for the nearest parent with relative font size (rem).
 - Most of the times, the best practice is just to use the 'rem' unit, however 'em' unit can be useful when you know what you're doing.
 - Its a bad practice to use 'vw' (viewport width) unit because it just adds horizontal scroll bar.
 - You can use 'dvh' (device viewport height) unit instead of 'vh' (viewport height) unit to make it work on mobile devices. 'dvh' is same as 'vh'.
@@ -128,3 +131,5 @@
 ### BEM
 
 - BEM is shorthand for Blocks, Elements and Modifiers.
+- A utility class is a class that is reusable multiple times across your website.
+- A modifier is used when you want to add a unique style to an element.
