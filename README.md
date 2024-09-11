@@ -137,4 +137,4 @@
 
 # Misc
 
-- using '<div style="height: 100vh"></div>' to fix the live server always scrolling up when you save the code.
+- using '\<div style="height: 100vh">\</div>' to fix the live server always scrolling up when you save the code.
