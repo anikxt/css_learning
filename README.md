@@ -24,7 +24,8 @@
 - Inheritance -> a property where the child elements inherits from its parent elements.
 - 'color' property only applies to text.
 - 'body' element applies 'background-color' to the whole page and not just the selected blue area in the developer tools. It's a strange property.
-  - Best Practies -> Never apply 'background-color' property to the 'html' element even though it takes priority over the 'body' element. Only apply the 'background-color' to 'body' element if necessary.
+  - Best Practices -> Never apply 'background-color' property to the 'html' element even though it takes priority over the 'body' element. Only apply the 'background-color' to 'body' element if necessary.
+- Best Practices -> set {'target: \_blank'; 'rel: noopener noreferrer'} will open a new tab when we click an anchor element.
 
 ### Typography
 
@@ -133,3 +134,7 @@
 - BEM is shorthand for Blocks, Elements and Modifiers.
 - A utility class is a class that is reusable multiple times across your website.
 - A modifier is used when you want to add a unique style to an element.
+
+# Misc
+
+- using '<div style="height: 100vh"></div>' to fix the live server always scrolling up when you save the code.

@@ -75,7 +75,7 @@ button {
   margin: 2rem auto;
 }
 
-/* pricing */
+/* pricing section */
 .pricing {
   margin-top: 10rem;
 }
@@ -134,6 +134,80 @@ button {
   gap: 1rem;
   font-size: 0.9rem;
   color: #ccc;
+}
+
+/* feature section*/
+.features {
+  margin-top: 10rem;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  /* border: 1px solid red; */
+}
+
+.features__title {
+  font-size: 2.25rem;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.features__description {
+  font-size: 1.2rem;
+  max-width: 45ch;
+  margin: 1rem auto;
+}
+
+.features__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.features__box {
+  border: 1px solid #ccc;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 500px;
+}
+
+.features__box-title {
+  line-height: 1;
+}
+
+.features__box-description {
+  margin-top: 1rem;
+}
+
+/* contact section */
+.contact {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.contact__title {
+  font-size: 2.25rem;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.contact__description {
+  font-size: 1.2rem;
+  max-width: 60ch;
+  margin: 1rem auto;
+}
+
+/* footer section */
+.footer {
+  margin-top: 10rem;
+  text-align: center;
+}
+
+.footer__title {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
 }
 
 /* utility class */
