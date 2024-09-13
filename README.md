@@ -135,6 +135,130 @@
 - A utility class is a class that is reusable multiple times across your website.
 - A modifier is used when you want to add a unique style to an element.
 
-# Misc
+### Misc
 
 - using '\<div style="height: 100vh">\</div>' to fix the live server always scrolling up when you save the code.
+
+### Responsiveness
+
+- Responsive web design is the practice of responding to a user's behaviour, screen size, device, and orientation. when you visit a website, the website should automatically accomodate for your envioronment.
+- You're not trying to make the entire page responsive but you're trying to make all of the individual components responsive. To think responsively is to think in terms of components.
+- A media query is the main tool we use to add responsiveness to our components.
+  - syntax -> \@media media-type (property){properties}
+  - media types: 'screen', 'print', 'speech', 'all'(default)
+- Instead of creating media queries for every breakpoint where you find something broken, just use predefined media queries and make your components responsive on them.
+- Mobile First ->
+
+  /\* xs \*/ \
+  @media (min-width: 475px) {}
+
+  /\* sm \*/ \
+  @media (min-width: 640px) {}
+
+  /\* md \*/ \
+  @media (min-width: 768px) {}
+
+  /\* lg \*/ \
+  @media (min-width: 1024px) {}
+
+  /\* xl \*/ \
+  @media (min-width: 1280px) {}
+
+  /\* 2xl \*/ \
+  @media (min-width: 1536px) {}
+
+<br>
+
+- Mobile First Utility Class -
+
+  .container { width: 100%; margin-inline: auto; padding-inline: 0.5rem; }
+
+  /\* xs \*/ \
+  @media (min-width: 475px) { .container { max-width: 475px; } }
+
+  /\* sm \*/ \
+  @media (min-width: 640px) { .container { max-width: 640px; } }
+
+  /\* md \*/ \
+  @media (min-width: 768px) { .container { max-width: 768px; } }
+
+  /\* lg \*/ \
+  @media (min-width: 1024px) { .container { max-width: 1024px; } }
+
+  /\* xl \*/ \
+  @media (min-width: 1280px) { .container {max-width: 1280px; } }
+
+  /\* 2xl \*/ \
+  @media (min-width: 1536px) { .container { max-width: 1536px; } }
+
+<br>
+
+- Desktop First ->
+
+  /\* 2xl \*/ \
+  @media (max-width: 1536px) {}
+
+  /\* xl \*/ \
+  @media (max-width: 1280px) {}
+
+  /\* lg \*/ \
+  @media (max-width: 1024px) {}
+
+  /\* md \*/ \
+  @media (max-width: 768px) {}
+
+  /\* sm \*/ \
+  @media (max-width: 640px) {}
+
+  /\* xs \*/ \
+  @media (max-width: 475px) {}
+
+<br>
+
+- Desktop First Utility Class -
+
+  .container { max-width: 1536px; margin-inline: auto; padding-inline: 0.5rem; }
+
+  /\* 2xl \*/ \
+  @media (max-width: 1536px) { .container { max-width: 1280px; } }
+
+  /\* xl \*/ \
+  @media (max-width: 1280px) { .container {max-width: 1024px; } }
+
+  /\* lg \*/ \
+  @media (max-width: 1024px) { .container { max-width: 768px; } }
+
+  /\* md \*/ \
+  @media (max-width: 768px) { .container { max-width: 640px; } }
+
+  /\* sm \*/ \
+  @media (max-width: 640px) { .container { max-width: 475px; } }
+
+  /\* xs \*/ \
+  @media (max-width: 475px) { .container { width: 100%; } }
+
+### Backgrounds & Images
+
+- 'background-color' property sets the background color of an element.
+- 'background-image' sets one or more background images on an element.
+  - syntax -> background-image: url("image location");
+- 'background-size' sets the size of the element's background image.
+  - it takes 'auto', 'contain', 'cover', custom pixels values
+- 'background-repeat' sets how background images are repeated.
+  - it takes 'repeat'(default), 'no-repeat', 'space', 'round', 'repeat-x', 'repeat-y' values.
+- 'background-position' sets the initial position for each background image.
+  - it can have 1-value to 4-value syntax
+  - it takes 'top', 'left', 'center', 'right', 'bottom'.
+- 'background-clip' sets whether an element's background extends underneath its border box, padding box, or content box.
+  - it takes 'border-box', 'padding-box', 'content-box', text values.
+- 'background-attachment' sets whether a background image's position is fixed within the viewport, or scrolls with its containing block.
+  - it takes 'fixed', 'local', 'scroll' values.
+- Best Practices -> img { display: block; max-width: 100% }
+- 'object-fit' is useful when you want a specific width and height on your image that isn't respectful of the default aspect ratio of the image.
+  - it takes 'contain', 'cover', 'fill', 'npne', 'scale-down' values.
+- 'aspect-ratio' allows you to define the desired width-to-height ratio of an element's box.
+  - this means that even if the parent container or viewport size changes, the browser will adjust the element's dimensions to maintain the specified width-to-height ratio.
+  - it takes one or both of the keyword 'auto' or a \<ratio> values.
+- 'object-position' specifies the alignment of the selected replaced element's contents within the element's box.
+  - areas of the box which aren't covered by the replaced element's object will show the element's background.
+  - it takes keyword, \<percentage>, \<length>, edge offsets, global values.
