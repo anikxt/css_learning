@@ -262,3 +262,65 @@
 - 'object-position' specifies the alignment of the selected replaced element's contents within the element's box.
   - areas of the box which aren't covered by the replaced element's object will show the element's background.
   - it takes keyword, \<percentage>, \<length>, edge offsets, global values.
+
+### Animations
+
+- 'transform' is a CSS property that allows us to rotate, scale, skew, and translate an element.
+  - the values that we assign to a transform property are all functions.
+  - 'rotate' function use degrees(deg) or turns(turn).
+  - 'scale' function takes unitless value.
+  - 'skew' function tilts or stretches an element on either the x axis or the y axis. it takes a degree(deg) value. it takes two values namely (x-axis value, y-axis value).
+  - 'translate' function allows us to move our element in any direction we want. it takes two values namely (x-axis value, y-axis value).
+    - it also has a 'translateX' and 'translateY' functions for separate x-axis and y-axis respectively.
+  - when combining 'transform' functions, when you want to overwrite the value of one function, you need to include all of the functions, otherwise you lose them.
+  - we also have individual properties like 'translate', 'rotate', 'scale' for more convenience.
+- Make transitions using 'transition-\*' property.
+  - 'transition-\*' has 4 properties namely 'transition-property', 'transition-duration', 'transition-timing-function', 'transition-delay'.
+  - 'transition' shorthand property takes 4 values namely 'property', 'duration', 'timing-function', 'delay'
+  - can use 'all' value to apply the same transition on all the properties.
+- Make transitions run on its own without any interactions using CSS keyframes and 'animation-\*' property.
+  - syntax -> \@keyframes keyframe-name {from{} to{}}
+  - 'animation-\*' has 7 properties namely 'animation-name', 'animation-duration', 'animation-timing-function', 'animation-delay', 'animation-iteration-count', 'animation-direction', 'animation-fill-mode'.
+  - 'animation' shorthand property takes 7 values namely 'name', 'duration', 'timing-function', 'delay', 'iteration-count', 'direction', 'fill-mode'.
+
+### Positions
+
+- position 'absolute' not only removes the element from the normal flow of the document but it also positions our element relative to the entire page. (to be applied on the element itself)
+- position 'relative' positions the element relative to its parent. (to be applied on the parent element)
+- position 'static' is the default value of the position property and is also the default position of all elements. (to be applied on the element itself)
+- the only difference between position 'static' and position 'relative' (when applied on the element itself) is that 'relative' has the access to the top, right, bottom, left and z-index properties.
+  - compared to the position 'absolute' the space allocated to the element is not removed.
+- position 'fixed' not only removes the element from the normal flow of the document but it also positions our element relative to the viewport. (to be applied on the element itself)
+- unlike the position 'fixed', sticky only works within the confine of its parent element or container.
+  - when using the top property with the position of sticky, you're not telling the element where to position itself. instead, the value we put in the top property represents the space between the element and the top of the viewport before the element starts sticking to it.
+
+### Grid
+
+- CSS grid is a two dimensional layout system, it's designed to handle both rows and columns simultaneously.
+- While CSS flexbox is a one dimensional layout system, it's designed around distributing items along a single axis, either horizontally or vertically within a container.
+- 'grid-template-rows' and 'grid-template-columns' allows us to define rows and columns on our grid.
+- 'grid-template-rows' and 'grid-template-columns' start at the index of one rather than zero.
+- 'grid-row-start', 'grid-row-end', 'grid-col-start' and 'grid-col-end', these four properties allow us to position our item on our grid instead of each.
+  - 'grid-row' and 'grid-column' are shorthand properties.
+  - 'grid-area' is a shorthand property for all four of the individual properties. <br> (row-start / col-start / row-end / col-end) in order.
+- '-1' represent the last lines on our grid for both the rows and the columns.
+- you can layer an item on another item using the 'z-index' property.
+- when items are added outside of the explicitly defined grid, this is referred to as an implicit grid.
+  - implicit grid doesn't inherit the values that we set in our grid template rows and grid template columns.
+  - 'grid-auto-rows' sets the size of the rows on any implicit grid. similar, 'grid-auto-column'
+  - change the default behaviour of 'grid-auto-row' using 'grid-auto-flow'
+- grid has em, rem, pixel (px), percentage (%) and fractional (fr) units.
+- 'minmax(min_sz, max_sz)' function allows us to define a minimum size and maximum size for our rows and columns.
+- 'repeat(no of times to repeat, sz)' function repeat a value the number of times that you pass it.
+- 'gap' property adds gap between the rows and the columns. (row, column) respectively.
+- 'grid-template-areas' allows us to position our items without using line numbers as a value.
+- 'justify-items' will align our items horizontally while 'align-items' will align our items vertically.
+  - as values we have four options, 'start', 'end', 'center' and 'stretch'.
+  - shorthand property -> 'place-items' (single value)
+- 'justify-self' and 'align-self' only align one item at a time.
+  - as values we have four options, 'start', 'end', 'center' and 'stretch'.
+  - shorthand property -> 'place-self' (single value)
+- 'justify-content' and 'align-content' will attempt to align the entire grid. essentially our grid needs to be smaller than our container for this to work.
+  - as values we have 7 options, 'start', 'end', 'center', 'stretch', 'space-around', 'space-between', and 'space-evenly'.
+  - shorthand property -> 'place-content' (single value)
+- 'auto-fit' keyword is very similar to 'flex-wrap'.
