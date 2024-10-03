@@ -255,7 +255,7 @@
   - it takes 'fixed', 'local', 'scroll' values.
 - Best Practices -> img { display: block; max-width: 100% }
 - 'object-fit' is useful when you want a specific width and height on your image that isn't respectful of the default aspect ratio of the image.
-  - it takes 'contain', 'cover', 'fill', 'npne', 'scale-down' values.
+  - it takes 'contain', 'cover', 'fill', 'none', 'scale-down' values.
 - 'aspect-ratio' allows you to define the desired width-to-height ratio of an element's box.
   - this means that even if the parent container or viewport size changes, the browser will adjust the element's dimensions to maintain the specified width-to-height ratio.
   - it takes one or both of the keyword 'auto' or a \<ratio> values.
@@ -324,3 +324,84 @@
   - as values we have 7 options, 'start', 'end', 'center', 'stretch', 'space-around', 'space-between', and 'space-evenly'.
   - shorthand property -> 'place-content' (single value)
 - 'auto-fit' keyword is very similar to 'flex-wrap'.
+
+### Advanced Concepts
+
+- Thinking in CSS (questions to be asked)
+  - Is the section one-dimensional or a two-dimensional layout?
+  - What's the best tool for the job? Flexbox? Grid? Or no layout tool at all?
+  - If we are using a layout tool, how many items are there?
+- To create CSS variables at the top of the file, select root pseudo class which has variables starting with the hyphen (--) (eg. --clr-white: #fff)
+  - While using it in CSS, use it like eg. color: var(--clr-white)
+- Four things to know about margin collapsing -
+  - margin collapsing only occurs on block level elements.
+  - margin collapsing doesn't happen when using layout tools like flexbox and grid.
+  - in the case, where you do have margin collapsing, the highest margin always wins.
+  - margin collapsing is bad and you should always avoid it
+    - this doesn't mean that you should wrap everything inside a layout tool like flexbox or grid. it only means that if you're working with block level elements, that you should have only one margin in between two elements.
+- A CSS reset is a reset that either resets the default styles that the browser assigns to an element, or a CSS reset is a reset that polishes some of the imperfections in the CSS language.
+
+  - Border Box reset ->
+
+    - \*,
+      \*::before,
+      \*::after {
+      box-sizing: border-box;
+      }
+
+  - Everything reset ->
+
+    - \* {
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+      }
+
+  - line height trick:
+
+    - calc(1em + 0.5rem)
+
+  - Smooth Scroll reset -> <br>
+
+    - html { scroll-behaviour: smooth; }
+
+  - Font Family reset -> <br>
+
+    - body { font-family: 'Inter', sans-serif; }
+
+    - input, button, textarea, select { font: inherit; }
+
+  - Media reset -> <br>
+
+    - img, picture, video, canvas, svg { display: block; max-width: 100%; }
+
+  - Button reset ->
+    - button { border: none; background: none; color: inherit; cursor: pointer; }
+
+- A utility class is a global class that doesn't belong to any one element. It's a ruleset you create without the intention of selecting a specific element, but instead with the intent of assigning the utility class to different individual elements. (specifically meant to be reusable)
+- CSS normalization is just a CSS file that we add or create in our project that makes browsers render all elements more consistently and in line with modern standards.
+  - It only targets only the stars that need normalizing.
+  - Modern Normalize CSS -> <br>
+    https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css
+- All 7 pseudo elements (::) ->
+  - after
+  - before
+  - marker
+  - selection
+  - placeholder
+  - first-letter
+  - first-line
+- All pseudo classes (:) ->
+  - hover
+  - focus
+  - focus-visible
+  - first-child
+  - last-child
+  - nth-child()
+  - not()
+  - root
+  - disabled
+  - active
+  - checked
+  - invalid
+  - valid

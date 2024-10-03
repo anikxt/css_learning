@@ -1,0 +1,92 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.img-wrapper {
+  width: 800px;
+  margin-inline: auto;
+  margin-top: 5rem;
+  position: relative;
+}
+
+.img-wrapper::after {
+  content: 'hover me';
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s;
+}
+
+.img-wrapper:hover::after {
+  content: '';
+  background: none;
+  backdrop-filter: blur(0);
+}
+
+.img {
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.menu {
+  margin-top: 5rem;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  /* list-style-type: '😃'; */
+}
+
+.list::marker {
+  content: '😃';
+}
+
+.list::selection {
+  color: red;
+  background-color: yellow;
+}
+
+.input::placeholder {
+  color: red;
+}
+
+.description {
+  margin-top: 2rem;
+}
+
+.description::first-letter {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.description::first-line {
+  color: green;
+}
