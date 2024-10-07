@@ -405,3 +405,18 @@
   - checked
   - invalid
   - valid
+
+### Final Project
+
+- Project Setup ->
+  - File Structure
+  - HTML Boilerplate
+  - Adding Fonts
+  - CSS Normalization
+  - CSS Resets
+  - Utility Classes
+  - Theming & CSS Variables
+- Import CSS Normalization before any other CSS import.
+- The 'vertical-align' property is a property that is unlocked to us when an element has a display of inline or inline block. so essentially, this property only works on inline or inline block elements. asthe name suggest, it aligns the inline element vertically.
+- You should have only one 'h1' element in the page
+- The 'object-fit' of 'contain' scales our image down to maintain its aspect ratio, while fitting it within the width and the height.
