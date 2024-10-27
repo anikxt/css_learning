@@ -363,7 +363,7 @@
 
   - Smooth Scroll reset -> <br>
 
-    - html { scroll-behaviour: smooth; }
+    - html { scroll-behavior: smooth; }
 
   - Font Family reset -> <br>
 
