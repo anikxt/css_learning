@@ -286,11 +286,16 @@
 ### Positions
 
 - position 'absolute' not only removes the element from the normal flow of the document but it also positions our element relative to the entire page. (to be applied on the element itself)
+  - has access to the 'top', 'right', 'bottom', 'left' and 'z-index' property.
+  - can be used with 'relative' property applied on the parent element as opposed to be 'relative' to the entire page (specifically, the \<html> element).
 - position 'relative' positions the element relative to its parent. (to be applied on the parent element)
+  - when position 'relative' applied on the element itself, it positions itself relative to itself.
+  - it has access to the 'top', 'right', 'bottom', 'left' and 'z-index' property but doesn't get removed from the document flow like the position 'absolute'.
 - position 'static' is the default value of the position property and is also the default position of all elements. (to be applied on the element itself)
+  - doesn't have access to the 'top', 'right', 'bottom', 'left' and 'z-index' property.
 - the only difference between position 'static' and position 'relative' (when applied on the element itself) is that 'relative' has the access to the top, right, bottom, left and z-index properties.
   - compared to the position 'absolute' the space allocated to the element is not removed.
-- position 'fixed' not only removes the element from the normal flow of the document but it also positions our element relative to the viewport. (to be applied on the element itself)
+- position 'fixed' not only removes the element from the normal flow of the document but it also positions the element relative to the viewport. (to be applied on the element itself)
 - unlike the position 'fixed', sticky only works within the confine of its parent element or container.
   - when using the top property with the position of sticky, you're not telling the element where to position itself. instead, the value we put in the top property represents the space between the element and the top of the viewport before the element starts sticking to it.
 
